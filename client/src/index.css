@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-slate-50 text-slate-800 antialiased;
+    font-family: 'Inter', 'Noto Sans Devanagari', 'Noto Sans Kannada', sans-serif;
+  }
+}
+
+/* Print Specific Styles for Advisory PDF Generation */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
